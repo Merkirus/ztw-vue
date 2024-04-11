@@ -1,17 +1,21 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <h1>XDDD</h1>
+  </div>
+  <header>
+    <nav>
+      <RouterLink to="/">Home</RouterLink>
+      <RouterLink to="/books">Books</RouterLink>
+    </nav>
+  </header>
+  <div id="app">
+    <h1>XDDD</h1>
+  </div>
+  <RouterView />
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+<script setup>
+import { RouterLink, RouterView } from 'vue-router';
 </script>
 
 <style>
@@ -22,5 +26,14 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+button {
+  background: blue;
+  border: 2px solid blue;
+}
+
+.small-container {
+  max-width: 680px;
 }
 </style>
