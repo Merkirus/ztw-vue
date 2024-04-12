@@ -1,39 +1,40 @@
-<template>
-  <div id="app">
-    <h1>XDDD</h1>
-  </div>
-  <header>
-    <nav>
-      <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/books">Books</RouterLink>
-    </nav>
-  </header>
-  <div id="app">
-    <h1>XDDD</h1>
-  </div>
-  <RouterView />
-</template>
-
 <script setup>
-import { RouterLink, RouterView } from 'vue-router';
+import { RouterLink, RouterView } from 'vue-router'
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<template>
+  <header>
+    <nav>
+      <RouterLink to="/books">Books</RouterLink>
+      <RouterLink to="/authors">Authors</RouterLink>
+      <RouterLink to="/users">Users</RouterLink>
+      <RouterLink to="/rentals">Rentals</RouterLink>
+    </nav>
+    <nav>
+      <RouterLink to="/books/add">Books Add</RouterLink>
+      <RouterLink to="/authors/add">Authors Add</RouterLink>
+      <RouterLink to="/users/add">Users Add</RouterLink>
+      <RouterLink to="/rentals/add">Rentals Add</RouterLink>
+    </nav>
+  </header>
+  <main>
+    <RouterView />
+  </main>
+</template>
 
-button {
-  background: blue;
-  border: 2px solid blue;
+<style scoped>
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 20vh;
 }
-
-.small-container {
-  max-width: 680px;
+main {
+  display: flex;
+  margin: auto;
 }
 </style>
