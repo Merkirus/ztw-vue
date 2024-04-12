@@ -39,7 +39,7 @@
             <p v-if="success" class="success-message">
                 Dane poprawnie zapisano
             </p>
-            <button>Dodaj kontakt</button>
+            <button>Dodaj książkę</button>
         </form>
     </div>
 </template>

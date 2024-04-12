@@ -31,7 +31,7 @@
             <p v-if="success" class="success-message">
                 Dane poprawnie zapisano
             </p>
-            <button>Dodaj kontakt</button>
+            <button>Dodaj autora</button>
         </form>
     </div>
 </template>
