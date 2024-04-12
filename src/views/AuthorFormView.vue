@@ -13,7 +13,7 @@
             <input
                 v-model="author.name"
                 type="text"
-                :class=" { 'has-error': submitting && invalidId }"
+                :class=" { 'has-error': submitting && invalidName }"
                 @focus="clearStatus"
                 @keypress="clearStatus"
             />
@@ -21,7 +21,7 @@
             <input
                 v-model="author.surname"
                 type="text"
-                :class=" { 'has-error': submitting && invalidPages }"
+                :class=" { 'has-error': submitting && invalidSurname }"
                 @focus="clearStatus"
                 @keypress="clearStatus"
             />

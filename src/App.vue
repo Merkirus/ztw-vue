@@ -5,7 +5,6 @@ import AppLayoutLinks from "@/layouts/AppLayoutLinks.vue";
 
 <template>
   <AppLayout>
-    <AppLayoutLinks/>
     <RouterView />
   </AppLayout>
 </template>

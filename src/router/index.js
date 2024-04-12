@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '@/views/HomeView.vue'
+import AppLayoutTable from '@/layouts/AppLayoutTable.vue'
+import AppLayoutForm from '@/layouts/AppLayoutForm.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -7,9 +8,9 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: () => import('@/layouts/AppLayoutLinks.vue'),
+      component: () => import('@/views/HomeView.vue'),
       meta: {
-        layout: 'AppLayoutLinks'
+        layout: 'AppLayoutTable'
       }
     },
     {
@@ -17,7 +18,7 @@ const router = createRouter({
       name: 'books',
       component: () => import('@/components/BooksTable.vue'),
       meta: {
-        layout: 'AppLayoutTable'
+        layout: AppLayoutTable
       }
     },
     {
@@ -25,7 +26,7 @@ const router = createRouter({
       name: 'edit_books',
       component: () => import('@/components/BookEditForm.vue'),
       meta: {
-        layout: 'AppLayoutForm'
+        layout: AppLayoutForm
       }
     },
     {
@@ -33,7 +34,7 @@ const router = createRouter({
       name: 'add_books',
       component: () => import('@/components/BookForm.vue'),
       meta: {
-        layout: 'AppLayoutForm'
+        layout: AppLayoutForm
       }
     },
     {
@@ -41,7 +42,7 @@ const router = createRouter({
       name: 'authors',
       component: () => import('@/components/AuthorsTable.vue'),
       meta: {
-        layout: 'AppLayoutTable'
+        layout: AppLayoutTable
       }
     },
     {
@@ -49,7 +50,7 @@ const router = createRouter({
       name: 'edit_authors',
       component: () => import('@/components/AuthorEditForm.vue'),
       meta: {
-        layout: 'AppLayoutForm'
+        layout: AppLayoutForm
       }
     },
     {
@@ -57,7 +58,7 @@ const router = createRouter({
       name: 'add_authors',
       component: () => import('@/components/AuthorForm.vue'),
       meta: {
-        layout: 'AppLayoutForm'
+        layout: AppLayoutForm
       }
     },
     {
@@ -65,7 +66,7 @@ const router = createRouter({
       name: 'users',
       component: () => import('@/components/UsersTable.vue'),
       meta: {
-        layout: 'AppLayoutTable'
+        layout: AppLayoutTable
       }
     },
     {
@@ -73,7 +74,7 @@ const router = createRouter({
       name: 'edit_users',
       component: () => import('@/components/UserEditForm.vue'),
       meta: {
-        layout: 'AppLayoutForm'
+        layout: AppLayoutForm
       }
     },
     {
@@ -81,7 +82,7 @@ const router = createRouter({
       name: 'add_users',
       component: () => import('@/components/UserForm.vue'),
       meta: {
-        layout: 'AppLayoutForm'
+        layout: AppLayoutForm
       }
     },
     {
@@ -89,7 +90,7 @@ const router = createRouter({
       name: 'rentals',
       component: () => import('@/components/RentalsTable.vue'),
       meta: {
-        layout: 'AppLayoutTable'
+        layout: AppLayoutTable
       }
     },
     {
@@ -97,7 +98,7 @@ const router = createRouter({
       name: 'edit_rentals',
       component: () => import('@/components/RentalEditForm.vue'),
       meta: {
-        layout: 'AppLayoutForm'
+        layout: AppLayoutForm
       }
     },
     {
@@ -105,7 +106,7 @@ const router = createRouter({
       name: 'add_rentals',
       component: () => import('@/components/RentalForm.vue'),
       meta: {
-        layout: 'AppLayoutForm'
+        layout: AppLayoutForm
       }
     }
   ]

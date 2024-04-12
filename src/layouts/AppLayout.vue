@@ -1,35 +1,11 @@
 <template>
-    <component :is="layout">
+    <component :is=$route.meta.layout>
         <slot />
     </component>
 </template>
 
 <script>
-import { watch } from 'vue';
-import { useRoute } from 'vue-router';
-import { markRaw } from 'vue';
-import AppLayoutDefault from './AppLayoutDefault.vue';
-
 export default {
-    name: "AppLayout",
-    setup() {
-        const layout = markRaw(AppLayoutDefault)
-        const route = useRoute()
-
-        watch(
-            () => route.meta,
-            async meta => {
-                try {
-                    const component = await import(`@/layouts/${meta.layout}.vue`)
-                    layout.value = component?.default || AppLayoutDefault
-                } catch (e) {
-                    layout.value = AppLayoutDefault
-                }
-            },
-            { immediate: true }
-        )
-
-        return { layout }
-    },
+    name: "AppLayout"
 }
 </script>

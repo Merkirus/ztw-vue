@@ -36,8 +36,6 @@
         props: {
             bookSource: Object
         },
-        setop() {
-        },
         data() {
             return {
                 submitting: false,

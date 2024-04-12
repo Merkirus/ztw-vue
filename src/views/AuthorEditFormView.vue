@@ -30,8 +30,6 @@ export default {
   props: {
     authorSource: Object
   },
-  setop() {
-  },
   data() {
     return {
       submitting: false,
@@ -44,7 +42,7 @@ export default {
       this.submitting = true
       this.clearStatus()
 
-      if (this.invalidId || this.invalidName || this.invalidSurname) {
+      if (this.invalidName || this.invalidSurname) {
         this.error = true;
         return;
       }
@@ -62,11 +60,6 @@ export default {
     }
   },
   computed: {
-    invalidId()  {
-      return this.authorSource.id === ''
-
-    },
-
     invalidName() {
       return this.authorSource.name === ''
     },
