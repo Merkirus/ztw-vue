@@ -3,7 +3,7 @@
         <form @submit.prevent="handleSubmit">
             <label>Id</label>
             <input
-                v-model="book.name"
+                v-model="book.id"
                 type="text"
                 :class="{ 'has-error': submitting && invalidId }"
                 @focus="clearStatus"

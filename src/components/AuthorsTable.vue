@@ -37,7 +37,7 @@
         } catch (error) {
           console.error(error)
         }
-        this.getauthors()
+        await this.getAuthors()
       },
   
       async getAuthors() {

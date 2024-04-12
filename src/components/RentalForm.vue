@@ -39,6 +39,28 @@ export default {
           console.error(error)
         }
     }
+    // addRental(rental) {
+    //   fetch('/api/rentals', {
+    //     method: 'POST',
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //     },
+    //     body: JSON.stringify(rental),
+    //   })
+    //       .then(response => {
+    //         if (!response.ok) {
+    //           throw new Error('Failed to add rental');
+    //         }
+    //         this.getRentals();
+    //         return response.json();
+    //       })
+    //       .then(data => {
+    //         console.log('rental added successfully:', data);
+    //       })
+    //       .catch(error => {
+    //         console.error('Error adding rental:', error);
+    //       });
+    // },
   }
 }
 </script>
