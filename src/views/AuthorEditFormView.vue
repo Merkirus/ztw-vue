@@ -1,19 +1,13 @@
 <template>
   <div>
     <form @submit.prevent="handleSubmit">
-      <label>Title</label>
-      <input
-          v-model="authorSource.id"
-          type="text"
-          :class=" { 'has-error': submitting && invalidId }"
-      />
-      <label>AutorId</label>
+      <label>Name</label>
       <input
           v-model="authorSource.name"
           type="text"
           :class=" { 'has-error': submitting && invalidName }"
       />
-      <label>Pages</label>
+      <label>Surname</label>
       <input
           v-model="authorSource.surname"
           type="text"
